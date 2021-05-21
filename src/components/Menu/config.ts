@@ -1,4 +1,4 @@
-import { MenuEntry } from '@beagleswap/uikit'
+import { MenuEntry } from '@beagleswap-dex/uikit'
 
 const config: MenuEntry[] = [
   {

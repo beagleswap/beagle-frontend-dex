@@ -1,6 +1,6 @@
 import { Trade, TradeType } from '@pantherswap-libs/sdk'
 import React, { useMemo, useState } from 'react'
-import { Text , Button } from '@beagleswap/uikit'
+import { Text , Button } from '@beagleswap-dex/uikit'
 import { Repeat } from 'react-feather'
 
 import { Field } from '../../state/swap/actions'
@@ -105,6 +105,7 @@ export default function SwapModalFooter({
           variant={severity > 2 ? 'danger' : 'primary'}
           mt="10px"
           id="confirm-swap-or-send"
+          fullWidth
         >
           {severity > 2 ? 'Swap Anyway' : 'Confirm Swap'}
         </Button>

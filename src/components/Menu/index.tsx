@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { Menu as UikitMenu, ConnectorId } from '@beagleswap/uikit'
+import { Menu as UikitMenu, ConnectorId } from '@beagleswap-dex/uikit'
 import { useWeb3React } from '@web3-react/core'
 import { allLanguages } from 'constants/localisation/languageCodes'
 import { LanguageContext } from 'hooks/LanguageContext'
@@ -35,12 +35,14 @@ const Menu: React.FC = (props) => {
         return activate(injected)
       }}
       logout={deactivate}
-      isDark={!!isDark}
+      isDark={isDark}
       toggleTheme={toggleTheme}
       currentLang={selectedLanguage?.code || ''}
       langs={allLanguages}
       setLang={setSelectedLanguage}
       cakePriceUsd={cakePriceUsd}
+      cakePriceLink={`https://bscscan.com/token/${pantherAddress}`}
+      /* profile={profile} */
       {...props}
     />
   )

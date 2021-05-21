@@ -2,7 +2,7 @@ import React, { useCallback, useState } from 'react'
 import { BigNumber } from '@ethersproject/bignumber'
 import { TransactionResponse } from '@ethersproject/providers'
 import { Currency, currencyEquals, ETHER, TokenAmount, WETH } from '@pantherswap-libs/sdk'
-import { Button, CardBody, AddIcon, Text as UIKitText } from '@beagleswap/uikit'
+import { Button, CardBody, AddIcon, Text as UIKitText } from '@beagleswap-dex/uikit'
 import { RouteComponentProps } from 'react-router-dom'
 import { LightCard } from 'components/Card'
 import { AutoColumn, ColumnCenter } from 'components/Column'
@@ -371,7 +371,7 @@ export default function AddLiquidity({
               )}
 
               {!account ? (
-                <ConnectWalletButton />
+                <ConnectWalletButton fullWidth />
               ) : (
                 <AutoColumn gap="md">
                   {(approvalA === ApprovalState.NOT_APPROVED ||
@@ -422,6 +422,7 @@ export default function AddLiquidity({
                         ? 'danger'
                         : 'primary'
                     }
+                    fullWidth
                   >
                     {error ?? 'Supply'}
                   </Button>

@@ -1,7 +1,7 @@
 import { CurrencyAmount, JSBI, Token, Trade } from '@pantherswap-libs/sdk'
 import React, { useCallback, useContext, useEffect, useMemo, useState } from 'react'
 import { ArrowDown } from 'react-feather'
-import { CardBody, ArrowDownIcon, Button, IconButton, Text } from '@beagleswap/uikit'
+import { CardBody, ArrowDownIcon, Button, IconButton, Text } from '@beagleswap-dex/uikit'
 import { ThemeContext } from 'styled-components'
 import AddressInputPanel from 'components/AddressInputPanel'
 import Card, { GreyCard } from 'components/Card'
@@ -377,9 +377,9 @@ const Swap = () => {
             </AutoColumn>
             <BottomGrouping>
               {!account ? (
-                <ConnectWalletButton />
+                <ConnectWalletButton fullWidth />
               ) : showWrap ? (
-                <Button disabled={Boolean(wrapInputError)} onClick={onWrap} >
+                <Button disabled={Boolean(wrapInputError)} onClick={onWrap} fullWidth>
                   {wrapInputError ??
                     (wrapType === WrapType.WRAP ? 'Wrap' : wrapType === WrapType.UNWRAP ? 'Unwrap' : null)}
                 </Button>
@@ -449,6 +449,7 @@ const Swap = () => {
                   id="swap-button"
                   disabled={!isValid || (priceImpactSeverity > 3 && !isExpertMode) || !!swapCallbackError}
                   variant={isValid && priceImpactSeverity > 2 && !swapCallbackError ? 'danger' : 'primary'}
+                  fullWidth
                 >
                   {swapInputError ||
                     (priceImpactSeverity > 3 && !isExpertMode

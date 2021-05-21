@@ -1,6 +1,6 @@
 import { Currency, ETHER, JSBI, TokenAmount } from '@pantherswap-libs/sdk'
 import React, { useCallback, useEffect, useState } from 'react'
-import { Button, ChevronDownIcon, AddIcon, CardBody, Text } from '@beagleswap/uikit'
+import { Button, ChevronDownIcon, AddIcon, CardBody, Text } from '@beagleswap-dex/uikit'
 import CardNav from 'components/CardNav'
 import { LightCard } from 'components/Card'
 import { AutoColumn, ColumnCenter } from 'components/Column'
@@ -90,6 +90,7 @@ export default function PoolFinder() {
               }}
               startIcon={currency0 ? <CurrencyLogo currency={currency0} style={{ marginRight: '.5rem' }} /> : null}
               endIcon={<ChevronDownIcon width="24px" color="textSubtle" />}
+              fullWidth
             >
               {currency0 ? currency0.symbol : <TranslatedText translationId={82}>Select a Token</TranslatedText>}
             </Button>
@@ -106,6 +107,7 @@ export default function PoolFinder() {
               }}
               startIcon={currency1 ? <CurrencyLogo currency={currency1} style={{ marginRight: '.5rem' }} /> : null}
               endIcon={<ChevronDownIcon width="24px" color="textSubtle" />}
+              fullWidth
             >
               {currency1 ? currency1.symbol : <TranslatedText translationId={82}>Select a Token</TranslatedText>}
             </Button>
