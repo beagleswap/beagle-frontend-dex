@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react'
 import styled from 'styled-components'
-import { Heading, IconButton, CloseIcon } from '@beagleswap-libs/uikit'
+import { Heading, IconButton, CloseIcon } from '@beagleswap/uikit'
 import { AutoColumn, ColumnCenter } from '../Column'
 
 

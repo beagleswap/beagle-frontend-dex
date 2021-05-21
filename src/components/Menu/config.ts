@@ -1,4 +1,4 @@
-import { MenuEntry } from '@beagleswap-libs/uikit'
+import { MenuEntry } from '@beagleswap/uikit'
 
 const config: MenuEntry[] = [
   {
