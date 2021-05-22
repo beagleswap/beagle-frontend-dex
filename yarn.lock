@@ -1338,8 +1338,9 @@
   resolved "https://registry.npmjs.org/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@beagleswap-dex/uikit@../beagle-dex-uikit":
+"@beagleswap-dex/uikit@beagleswap/beagle-dex-uikit":
   version "0.10.6"
+  resolved "https://codeload.github.com/beagleswap/beagle-dex-uikit/tar.gz/ffb6ca9dc7ab611e2d4a23189123945d772bc66f"
   dependencies:
     "@types/lodash" "^4.14.162"
     "@types/styled-system" "^5.1.10"
